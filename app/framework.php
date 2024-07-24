@@ -52,7 +52,7 @@ $theme->provider( Backdrop\Theme\Provider::class );
  * application instance as a parameter.
  */
 
-do_action( 'creativity/bootstrap', $theme );
+do_action( 'amicable/bootstrap', $theme );
 
 /** ------------------------------------------------------------------------------------------
  * Boot the application.
