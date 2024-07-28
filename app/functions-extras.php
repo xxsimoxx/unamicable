@@ -9,6 +9,9 @@
  * @link      https://luthemes.com/portfolio/amicable
  */
 
+ use function Backdrop\Fonts\enqueue;
+
+
 /**
  * Changes the theme template path to the `public/views` folder.
  *
@@ -19,4 +22,24 @@
 add_filter( 'backdrop/template/path', function() {
 
 	return 'public/views';
+} );
+
+/**
+ * Enqueues specific theme fonts.
+ *
+ * This function enqueues the specified fonts for use in the theme.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+
+	array_map( function( $file ) {
+		enqueue( $file );
+	}, [
+		'fira-sans',
+		'merriweather',
+		'tangerine'
+	] );
 } );
