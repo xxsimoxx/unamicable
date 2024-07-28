@@ -34,7 +34,9 @@ if ( file_exists( get_parent_theme_file_path( '/vendor/autoload.php' ) ) ) {
 array_map( function( $file ) {
 	require_once( get_parent_theme_file_path( "app/{$file}.php" ) ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 }, [
+	'functions-assets',
 	'functions-extras',
-	'functions-scripts',
+	'functions-filters',
 	'functions-setup',
+	'functions-template'
 ] );
