@@ -3,15 +3,6 @@ Amicable is a next-generation theme designed to work with ClassicPress, offering
 
 This theme is a parent theme. What this means is that to customize it, you should create a child theme. All you need to know is that it's a solid and flexible starting point for any blog or portfolio.
 
-## Features
-Amicable is built from the Backdrop framework, so it provides a great starting point with many useful features.
-
-* Custom `Portfolio` that integrates with the [Backdrop Custom Portfolio](https://github.com/benlumia007/backdrop-custom-portfolio) plugin.
-* Custom layouts that allows you to quickly change the layout of your site.
-* Uses the built-in ClassicPress menu system. No need to hack your navigation into place.
-* Integration with the ClassicPress theme customizer to allow you to customize the look of your site.
-* Ability to create custom templates for any post type.
-
 ## Child themes
 Since amicable is a parent theme, you'll want to create a child theme if you plan on making any customizations. Don't know how to make a child theme? Just follow the steps below.
 
