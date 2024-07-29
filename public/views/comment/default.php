@@ -18,15 +18,11 @@
 			'after' => '<br />',
 		] ) ?>
 
-		<?php Backdrop\Theme\Comment\display_permalink( [
-			'text' => Backdrop\Theme\Comment\render_date( [
-				'format' => sprintf(
-				// Translators: Comment date + time format.
-					esc_html__( '%1$s', 'amicable' ),
-					get_option( 'date_format' )
-				)
-			] )
-		] ) ?>
+		<?php
+		Backdrop\Theme\Comment\display_permalink( [
+			'text' => Backdrop\Theme\Comment\render_date()
+		] );
+		?>
 		<?php Backdrop\Theme\Comment\display_edit_link( [ 'before' => Amicable\sep() ] ) ?>
 		<?php Backdrop\Theme\Comment\display_reply_link( [ 'before' => Amicable\sep() ] ) ?>
 	</header>

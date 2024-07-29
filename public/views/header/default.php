@@ -2,11 +2,11 @@
 /**
  * Default header template
  *
- * @package   Creativity
+ * @package   Amicable
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://luthemes.com/portfolio/creativity
+ * @link      https://luthemes.com/portfolio/amicable
  */
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="container" class="site-container">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'creativity' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'amicable' ); ?></a>
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">

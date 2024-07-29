@@ -7,7 +7,7 @@
 	</header>
 	<?php if ( has_post_thumbnail() ) { ?>
 		<picture class="post-thumbnail">
-			<?php the_post_thumbnail( 'amicable-large-thumbnails' ); ?>
+			<?php the_post_thumbnail( 'amicable-large' ); ?>
 		</picture>
 	<?php } ?>
 	<div class="entry-content">
