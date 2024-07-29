@@ -48,12 +48,12 @@ add_action( 'after_setup_theme', function() {
 		/**
 		 * By add_image_size( 'amicable-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
 		 */
-		add_image_size( 'amicable-medium-thumbnails', 800, 386, true );
+		add_image_size( 'amicable-medium', 640, 360, true );
 
 		/**
 		 * By add_image_size( 'amicable-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
 		 */
-		add_image_size( 'amicable-large-thumbnails', 1170, 614, true );
+		add_image_size( 'amicable-large', 896, 504, true );
 
 	if ( ! is_classicpress() ) {
 
@@ -74,8 +74,8 @@ add_action( 'after_setup_theme', function() {
 add_action( 'init', function() {
 
 	register_nav_menus( [
-		'primary'	=> esc_html__( 'Primary Navigation', 'creativity' ),
-		'social' => esc_html__( 'Social Navigation', 'creativity' )
+		'primary'	=> esc_html__( 'Primary Navigation', 'amicable' ),
+		'social' => esc_html__( 'Social Navigation', 'amicable' )
 	] );
 
 }, 5 );
