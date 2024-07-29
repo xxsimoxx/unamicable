@@ -25,10 +25,10 @@ namespace Amicable;
 function sep( $sep = '' ) {
 
 	return apply_filters(
-		'exhale/sep',
+		'amicable/sep',
 		sprintf(
-			' <span class="sep mx-2">%s</span> ',
-			$sep ?: esc_html_x( '&middot;', 'meta separator', 'exhale' )
+			' <span class="sep">%s</span> ',
+			$sep ?: esc_html_x( '&middot;', 'meta separator', 'amicable' )
 		)
 	);
 }
