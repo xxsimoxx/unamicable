@@ -10,7 +10,7 @@
  * @package   Amicable
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2024 Benjamin Lu
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/amicable
  */
 
@@ -67,7 +67,8 @@ mix.version();
  *
  * @link https://laravel.com/docs/5.6/mix#working-with-scripts
  */
-mix.js( `${devPath}/js/app.js`, 'js' );
+mix.js( `${devPath}/js/app.js`, 'js' )
+	.js( `${devPath}/js/navigation.js`, 'js' );
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
