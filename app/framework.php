@@ -33,8 +33,8 @@ $theme->provider( Backdrop\Languages\Provider::class );
 $theme->provider( Backdrop\Mix\Provider::class );
 $theme->provider( Backdrop\Template\Hierarchy\Provider::class );
 $theme->provider( Backdrop\Template\Manager\Provider::class );
-$theme->provider( Backdrop\View\Provider::class );
 $theme->provider( Backdrop\Theme\Provider::class );
+$theme->provider( Backdrop\View\Provider::class );
 
 /** ------------------------------------------------------------------------------------------
  * Register additional service providers for the theme.
