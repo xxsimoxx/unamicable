@@ -28,6 +28,9 @@ return [
 
 	'theme_header_custom_logo' => false,
 
+	// Branding separator (see `config/character-entities.php` for options).
+	'branding_sep' => '&#183;',
+
 
 	# ----------------------------------------------------------------------
 	# Footer.
