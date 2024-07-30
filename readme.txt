@@ -5,7 +5,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-amicable is a next-generation theme designed to work with ClassicPress, offering an ideal experience for showcasing your site's content.
+Amicable is a next-generation theme designed to work with ClassicPress, offering an ideal experience for showcasing your site's content.
 
 == Installation ==
 1. In your admin panel when logged in, go to Appearance -> Themes and Click on Add New.
@@ -25,5 +25,5 @@ This theme makes use of several open-source fonts available via Google Web Fonts
 
 == Copyright ==
 Amicable is licensed under the GNU Public License, version 2 or  later (GPL).
-This theme is copyrighted to [Benjamin Lu](https://benjlu.com)
-2023. © Benjamin Lu
+This theme is copyrighted to [luthemes](https://luthemes.com)
+2024. © luthemes
