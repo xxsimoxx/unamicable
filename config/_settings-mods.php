@@ -42,9 +42,9 @@ return [
 	// Default footer credit text.
 	'theme_footer_custom_credit' => function() {
 		if ( is_classicpress() ) {
-            return sprintf( __( 'Powered by %s.', 'amicable' ), SilverQuantum\Site\render_cp_link() );
+            return sprintf( __( 'Powered by %s.', 'amicable' ), Backdrop\Theme\Site\render_cp_link() );
         } else {
-            return sprintf( __( 'Powered by %s.', 'amicable' ), SilverQuantum\Site\render_wp_link() );
+            return sprintf( __( 'Powered by %s.', 'amicable' ), Backdrop\Theme\Site\render_wp_link() );
         }
 	},
 ];
