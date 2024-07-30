@@ -8,12 +8,18 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 1.125em;
+		gap: 1.125rem;
 	}
 
 	.site-branding {
 		display: flex;
 		align-items: center;
+
+		.sep {
+			font-size: 1.125rem;
+			margin-left: 0.75rem;
+			margin-right: 0.75rem;
+		}
 
 		.site-title,
 		.site-description {
@@ -22,7 +28,7 @@
 		}
 
 		.site-title {
-			font-size: 2rem;
+			font-size: 1.75rem;
 			margin-left: 1rem;
 		}
 
@@ -34,7 +40,7 @@
 
 		.site-description {
 			color: #959595;
-			margin-left: 0.6rem; /* Adjust this value as needed for spacing */
+			font-size: 15px;
 		}
 	}
 }

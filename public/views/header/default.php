@@ -25,11 +25,17 @@
 		<div class="branding-navigation">
 			<div class="site-branding">
 				<?php Backdrop\Theme\Site\display_site_title(); ?>
-				<?php if ( $sep = Amicable\Tools\Mod::get( 'branding_sep' ) ) : ?>
-				<span class="app-header__sep hidden sm:block mx-3 leading-none" aria-hidden="true"><?= esc_html( $sep ) ?></span>
-				<?php endif ?>
+				<?php
+					$tagline = get_bloginfo( 'description' );
 
-				<?php Backdrop\Theme\Site\display_site_description(); ?>
+					if ( ! empty( $tagline ) ) {
+						if ( $sep = Amicable\Tools\Mod::get( 'branding_sep' ) ) : ?>
+							<span class="sep" aria-hidden="true"><?php echo esc_html( $sep ) ?></span>
+						<?php endif;
+
+						Backdrop\Theme\Site\display_site_description();
+					}
+				?>
 			</div>
 			<?php Backdrop\View\display( 'menu', 'primary', [ 'location' => 'primary'] ); ?>
 		</div>

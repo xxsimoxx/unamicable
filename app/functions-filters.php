@@ -20,7 +20,7 @@
 add_filter( 'excerpt_more', function() {
 
 	return sprintf(
-		'&thinsp;&hellip;&thinsp;<a href="%s" class="entry__more-link italic">%s</a>',
+		'&thinsp;&hellip;&thinsp;<a href="%s" class="entry-more-link">%s</a>',
 		esc_url( get_permalink() ),
 		sprintf(
 			// Translators: %s is the post title for screen readers.
