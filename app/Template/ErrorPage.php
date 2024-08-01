@@ -72,7 +72,7 @@ class ErrorPage {
 	public function setup() {
 
 		if ( $this->hasPost() ) {
-			$GLOBALS['post'] = $this->post;
+			$GLOBALS['post'] = $this->post; //phpcs:ignore
 
 			setup_postdata( $this->post );
 		}
@@ -114,7 +114,7 @@ class ErrorPage {
 			return;
 		}
 
-		esc_html_e( '404 Not Found', 'Amicable' );
+		esc_html_e( '404 Not Found', 'amicable' );
 	}
 
 	/**
@@ -133,7 +133,7 @@ class ErrorPage {
 
 		printf(
 			'<p>%s</p>',
-			esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.', 'Amicable' )
+			esc_html__( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.', 'amicable' )
 		);
 
 		get_search_form();
