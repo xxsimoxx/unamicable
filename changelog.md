@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.3 - 07.29.2024
+
+### Addded
+- Add some files for upcoming features
+
 ## 0.0.2 - 07.29.2024
 
 ### Added
