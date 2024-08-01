@@ -17,7 +17,7 @@
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( get_theme_mod('theme_global_layout', 'full') == 'full' ? 'layout-full' : 'layout-wide' ); ?>>
 <?php wp_body_open(); ?>
 <div id="container" class="site-container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'amicable' ); ?></a>
