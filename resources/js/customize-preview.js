@@ -18,7 +18,7 @@
             if (newval === 'full') {
                 $('body').removeClass('boxed-width').addClass('full-width');
             } else if (newval === 'wide') {
-                $('body').removeClass('full-width').addClass('boxed-width');
+                $('body').removeClass('layout-full').addClass('layout-wide');
             }
         });
     });

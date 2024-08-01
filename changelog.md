@@ -5,6 +5,7 @@
 ### Added
 - Add Theme: Global Layout
 - Add Theme: Settings Options
+- Add Custom 404 Error Page
 
 ## 0.0.3 - 07.29.2024
 

@@ -225,15 +225,15 @@ class Theme {
 	 */
 	public function displayCard() { ?>
 
-		<div class="theme<?= $this->active() ? ' active' : '' ?>" aria-describedby="<?= esc_attr( sprintf( '%1$s-action %1$s-name', $this->name() ) ) ?>" data-slug="<?= esc_attr( $this->name() ) ?>">
+		<div class="theme<?php echo $this->active() ? ' active' : '' ?>" aria-describedby="<?php echo esc_attr( sprintf( '%1$s-action %1$s-name', $this->name() ) ) ?>" data-slug="<?php echo esc_attr( $this->name() ) ?>">
 
 			<div class="theme-screenshot">
-				<img src="<?= esc_url( $this->screenshot() ) ?>" alt="" />
+				<img src="<?php echo esc_url( $this->screenshot() ) ?>" alt="" />
 			</div>
 
 			<div class="theme-id-container">
 
-				<h2 class="theme-name" id="<?= esc_attr( sprintf( '%s-name', $this->name() ) ) ?>">
+				<h2 class="theme-name" id="<?php echo esc_attr( sprintf( '%s-name', $this->name() ) ) ?>">
 					<?php if ( $this->active() ) : ?>
 						<?php printf(
 							'<span>%s</span> %s',
@@ -241,13 +241,13 @@ class Theme {
 							esc_html( $this->label() )
 						) ?>
 					<?php else : ?>
-						<?= esc_html( $this->label() ) ?>
+						<?php echo esc_html( $this->label() ) ?>
 					<?php endif ?>
 				</h2>
 
 				<div class="theme-actions">
 					<?php foreach ( $this->themeActions() as $action ) : ?>
-						<?= $action ?>
+						<?php echo $action // phpcs:ignore ?>
 					<?php endforeach ?>
 				</div>
 			</div>

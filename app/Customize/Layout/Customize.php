@@ -49,11 +49,11 @@ class Customize extends Customizable {
 		$manager->add_control( 'theme_global_layout', [
 			'section'     => 'theme_global_layout',
 			'type'        => 'select',
-			'label'       => __( 'Global Layout', 'exhale' ),
-			'description' => __( 'Select the layout used across the site.', 'exhale' ),
+			'label'       => __( 'Global Layout', 'amicable' ),
+			'description' => __( 'Select the layout used across the site.', 'amicable' ),
 			'choices'     => [
-				'full' => __( 'Full', '' ),
-				'wide' => __( 'Wide', '' )
+				'full' => __( 'Full', 'amicable' ),
+				'wide' => __( 'Wide', 'amicable' )
 			]
 		] );
 	}

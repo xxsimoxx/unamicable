@@ -17,7 +17,7 @@
 			console.log( newval );
             if (newval === 'full') {
                 $('body').removeClass('boxed-width').addClass('full-width');
-            } else if (newval === 'wide') {
+            } else if (newval === 'boxed') {
                 $('body').removeClass('full-width').addClass('boxed-width');
             }
         });
