@@ -31,6 +31,8 @@ return [
 	// Branding separator (see `config/character-entities.php` for options).
 	'branding_sep' => '&#183;',
 
+	'layout' => 'full',
+
 
 	# ----------------------------------------------------------------------
 	# Footer.
