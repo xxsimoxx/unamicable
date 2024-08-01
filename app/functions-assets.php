@@ -46,3 +46,17 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 } );
+
+add_action( 'wp_enqueue_scripts', function() {
+	$global_layout = get_theme_mod( 'theme_global_layout', 'full' );
+
+	$custom_css = "
+		.layout-wide .site-header .branding-navigation {
+			margin: 0 auto;
+			max-width: 1170px;
+		}
+	";
+
+	wp_add_inline_style( 'amicable-screen', $custom_css );
+
+} );
