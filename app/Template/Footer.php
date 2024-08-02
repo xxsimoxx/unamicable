@@ -50,9 +50,7 @@ class Footer {
 			'after'  => '</p>'
 		] );
 
-		$text = Mod::get( 'powered_by' )
-		        ? PoweredBy::render()
-			: Mod::get( 'footer_credit' );
+		$text = Mod::get( 'theme_footer_powered_by' ) ? PoweredBy::render() : Mod::get( 'theme_footer_custom_credit' );
 
 		return sprintf(
 			'%s%s%s',
@@ -80,7 +78,8 @@ class Footer {
 			'em'      => [ 'class' => true ],
 			'i'       => [ 'class' => true ],
 			'span'    => [ 'class' => true ],
-			'strong'  => [ 'class' => true ]
+			'strong'  => [ 'class' => true ],
+			'br'		=> []
 		];
 	}
 }

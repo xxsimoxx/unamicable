@@ -33,6 +33,7 @@ class Provider extends ServiceProvider {
         $this->app->singleton( Component::class, function() {
 
 			return new Component( [
+                Footer\Customize::class,
 				Layout\Customize::class
 			] );
 		} );

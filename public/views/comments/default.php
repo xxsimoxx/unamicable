@@ -7,7 +7,7 @@ if ( post_password_required() ) {
 <?php if ( comments_open() ) { ?>
 	<section id="comments-area" class="comments-area">
 		<?php if ( have_comments() ) { ?>
-			<h1 class="comments-title">
+			<h2 class="comments-title">
 				<?php $count = get_comments_number(); ?>
 				<?php
 				if ( '1' === $count ) {
@@ -17,7 +17,7 @@ if ( post_password_required() ) {
 					printf( _nx( '%1$s Comment', '%1$s Comments', absint( $count ), 'comments title', 'amicable' ), absint( number_format_i18n( $count ) ) ); // phpcs:ignore
 				}
 				?>
-			</h1>
+			</h2>
 		<?php } ?>
 		<ol class="comment-list">
 			<?php

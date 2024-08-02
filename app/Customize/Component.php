@@ -19,6 +19,7 @@ use function Backdrop\Mix\asset;
 use Amicable\Tools\Collection;
 use Amicable\Tools\Mod;
 use WP_Customize_Manager;
+use Amicable\Template\Footer;
 
 class Component implements Bootable {
 
@@ -116,6 +117,12 @@ class Component implements Bootable {
 			'title' => __( 'Layout', 'amicable' ),
 			'priority' => 5
 		] );
+
+		$manager->add_section( 'theme_footer_credit', [
+			'title' => esc_html__( 'Credit', 'amicable' ),
+			'panel' => 'theme_footer'
+		] );
+
 
 		foreach ( $this->components as $component ) {
 
