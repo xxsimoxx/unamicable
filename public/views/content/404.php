@@ -2,7 +2,7 @@
 	<main id="main" class="content-area">
 		<?php
 		use Amicable\Template\ErrorPage;
-		$error = new ErrorPage();
+		$error = new ErrorPage(); // phpcs:ignore
 		?>
 		<?php $error->setup(); ?>
 		<article id="post-0" class="page">
