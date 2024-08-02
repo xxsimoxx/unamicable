@@ -55,7 +55,7 @@ class Mod {
 	 */
 	public static function fallback( $name ) {
 
-		$mods = App::resolve( 'amicable/mods' );;
+		$mods = App::resolve( 'amicable/mods' );
 
 		if ( isset( $mods[ $name ] ) ) {
 

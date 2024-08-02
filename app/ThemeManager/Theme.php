@@ -188,8 +188,7 @@ class Theme {
 		return wp_nonce_url(
 			add_query_arg( [
 				'action'     => 'activate',
-			//	'template'   => urlencode( $this->wp_theme->get_template() ),
-				'stylesheet' => urlencode( $this->wp_theme->get_stylesheet() )
+				'stylesheet' => rawurlencode( $this->wp_theme->get_stylesheet() )
 			], admin_url( 'themes.php' ) ),
 			'switch-theme_' . $this->wp_theme->get_stylesheet()
 		);
