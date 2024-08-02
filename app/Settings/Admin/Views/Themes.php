@@ -65,7 +65,7 @@ class Themes extends View {
 	public function register() {
 
 		// Register child themes.
-		add_action( 'exhale/settings/admin/view/themes/register', [ $this, 'registerDefaultThemes' ] );
+		add_action( 'amicable/settings/admin/view/themes/register', [ $this, 'registerDefaultThemes' ] );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class Themes extends View {
 	public function boot() {
 		$this->themes = new ThemeCollection();
 
-		do_action( 'exhale/settings/admin/view/themes/register', $this->themes );
+		do_action( 'amicable/settings/admin/view/themes/register', $this->themes );
 	}
 
 	/**

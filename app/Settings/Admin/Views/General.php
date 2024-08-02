@@ -14,6 +14,7 @@
 namespace Amicable\Settings\Admin\Views;
 
 use Amicable\Settings\Options;
+use function Backdrop\Theme\is_classicpress;
 
 /**
  * General settings view class.
@@ -42,7 +43,8 @@ class General extends View {
 	 * @return string
 	 */
 	public function label() {
-		return __( 'General', 'amicable' );
+
+		return esc_html__( 'General', 'amicable' );
 	}
 
 	/**
@@ -62,8 +64,8 @@ class General extends View {
 		register_setting( 'amicable_settings', 'amicable_settings', [ $this, 'validateSettings' ] );
 
 		// Register sections and fields.
-		add_action( 'exhale/settings/admin/view/general/register', [ $this, 'registerDefaultSections' ] );
-		add_action( 'exhale/settings/admin/view/general/register', [ $this, 'registerDefaultFields'   ] );
+		add_action( 'amicable/settings/admin/view/general/register', [ $this, 'registerDefaultSections' ] );
+		add_action( 'amicable/settings/admin/view/general/register', [ $this, 'registerDefaultFields'   ] );
 	}
 
 	/**
@@ -75,7 +77,7 @@ class General extends View {
 	 * @return void
 	 */
 	public function boot() {
-		do_action( 'exhale/settings/admin/view/general/register' );
+		do_action( 'amicable/settings/admin/view/general/register' );
 	}
 
 	/**
@@ -86,7 +88,7 @@ class General extends View {
 	 * @param  array  $input
 	 * @return array
 	 */
-	public function validateSettings( $settings ) {
+	function validateSettings( $settings ) { // phpcs:ignore
 
 		// Checkboxes.
 		$settings['disable_emoji']    = ! empty( $settings['disable_emoji']    );
@@ -109,13 +111,15 @@ class General extends View {
 	 */
 	public function registerDefaultSections() {
 
+		$label = is_classicpress() ? __( 'Clean ClassicPress', 'amicable' ) : __( 'Clean WordPress', 'amicable' );
+
 		$sections = [
 			'reading' => [
 				'label'    => __( 'Reading', 'amicable' ),
 				'callback' => 'sectionReading'
 			],
-			'clean_wp' => [
-				'label'    => __( 'Clean WordPress', 'amicable' ),
+			'clean_cp' => [
+				'label'    => $label,
 				'callback' => 'sectionCleanCP'
 			]
 		];
@@ -154,17 +158,17 @@ class General extends View {
 			'emoji' => [
 				'label'    => __( 'Emoji', 'amicable' ),
 				'callback' => 'fieldEmoji',
-				'section'  => 'clean_wp',
+				'section'  => 'clean_cp',
 			],
 			'toolbar' => [
 				'label'    => __( 'Toolbar', 'amicable' ),
 				'callback' => 'fieldToolbar',
-				'section'  => 'clean_wp'
+				'section'  => 'clean_cp'
 			],
 			'embeds' => [
 				'label'    => __( 'Embeds', 'amicable' ),
 				'callback' => 'fieldEmbeds',
-				'section'  => 'clean_wp'
+				'section'  => 'clean_cp'
 			]
 		];
 
@@ -189,9 +193,8 @@ class General extends View {
 	 * @return void
 	 */
 	public function sectionReading() { ?>
-
 		<p>
-			<?php esc_html_e( 'Alter the output for specific views on the front end.', 'amicable' ) ?>
+			<?php esc_html_e( 'Settings related to reading and display options for your site, including the 404 error page.', 'amicable' ) ?>
 		</p>
 
 	<?php }
@@ -222,7 +225,6 @@ class General extends View {
 
 		$dropdown = wp_dropdown_pages( [
 			'name'              => 'amicable_settings[error_page]',
-			'show_option_none'  => '-',
 			'option_none_value' => 0,
 			'selected'          => Options::get( 'error_page' ), // phpcs:ignore
 			'post_status'       => [ 'private' ],
@@ -233,17 +235,22 @@ class General extends View {
 			<label>
 				<?php if ( $dropdown ) : ?>
 
-					<?php echo $dropdown // phpcs:ignore ?>
+					<?php echo wp_kses( $dropdown, [
+                    'select' => [
+                        'name' => true,
+                        'id' => true
+                    ],
+                    'option' => [
+                        'value' => true,
+                        'selected' => true
+                    ]
+                ] ); ?>
 
 				<?php else : ?>
 
-					<select name="amicable_settings[error_page]">
-						<option value="0" selected="selected"><?php esc_html_e( 'No Private Pages', 'amicable' ) ?></option>
-					</select>
-
 					<?php if ( current_user_can( 'publish_pages' ) ) : ?>
 
-						<a href="<?php esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'amicable' ) ?></a>
+						<a href="<?php echo esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'amicable' ) ?></a>
 
 					<?php endif ?>
 
@@ -252,7 +259,7 @@ class General extends View {
 		</p>
 
 		<p class="description">
-			<?php esc_html_e( 'Select a page to display when a user visits a 404 error page on your site. The page must be set to private so that it will not appear on the front end.', 'amicable' ) ?>
+			<?php esc_html_e( 'Select a page to display when users visit a 404 error on your site. Ensure the page is set to private so it does not appear on the front end.', 'amicable' ) ?>
 		</p>
 
 	<?php }
@@ -307,12 +314,14 @@ class General extends View {
 	 * @access public
 	 * @return void
 	 */
-	public function fieldEmbeds() { ?>
+	public function fieldEmbeds() {
+		$label = is_classicpress() ? __( 'Disable ClassicPress Embeds', 'amicable' ) : __( 'Disable WordPress Embeds', 'amicable' );
+		?>
 
 		<p>
 			<label>
 				<input type="checkbox" name="amicable_settings[disable_wp_embed]" value="true" <?php checked( Options::get( 'disable_wp_embed' ) ) ?> />
-				<?php esc_html_e( 'Disable WordPress Embeds', 'amicable' ) ?>
+				<?php echo esc_html( $label ); ?>
 			</label>
 		</p>
 
@@ -358,4 +367,5 @@ class General extends View {
 	 * @return     void
 	 */
 	public function fieldArchivePostsNumber() {}
+
 }

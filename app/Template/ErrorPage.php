@@ -72,7 +72,7 @@ class ErrorPage {
 	public function setup() {
 
 		if ( $this->hasPost() ) {
-			$GLOBALS['post'] = $this->post; //phpcs:ignore
+			$GLOBALS['post'] = $this->post; // phpcs:ignore
 
 			setup_postdata( $this->post );
 		}

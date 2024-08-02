@@ -7,5 +7,4 @@
 			<?php the_posts_pagination(); ?>
 		<?php endif; ?>
 	</main>
-	<?php Backdrop\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
 </section>

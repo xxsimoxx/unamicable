@@ -11,7 +11,7 @@
  * @link      https://luthemes.com/portfolio/amicable
  */
 
-namespace amicable\Settings\Admin\Views;
+namespace Amicable\Settings\Admin\Views;
 
 use Backdrop\Tools\Collection;
 
