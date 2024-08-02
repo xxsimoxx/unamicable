@@ -208,7 +208,7 @@ class Theme {
 		if ( ! $this->active() ) {
 
 			$url = add_query_arg( [
-				'theme' => urlencode( $this->name() )
+				'theme' => rawurlencode( $this->name() )
 			], $url );
 		}
 
