@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.0.5 - TBD
+## 0.0.5 - 08.02.2024
 
 ### Added
 - Add Theme: Custom Footer Credit
