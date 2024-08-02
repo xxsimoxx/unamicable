@@ -46,7 +46,7 @@ return [
 
 	// Default footer credit text.
 	'theme_footer_custom_credit' => function() {
-		$year = date('Y'); // Get the current year
+		$year = gmdate('Y'); // Get the current year
 		$copyright = sprintf( __( "&#169; %1\$s. %2\$s.", 'amicable' ), $year, Backdrop\Theme\Site\render_home_link() );
 
 		if ( is_classicpress() ) {
