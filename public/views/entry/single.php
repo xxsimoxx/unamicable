@@ -6,9 +6,12 @@
 		<?php Backdrop\Theme\Entry\display_title(); ?>
 	</header>
 	<?php if ( has_post_thumbnail() ) { ?>
-		<figure class="post-thumbnail">
-			<?php the_post_thumbnail( 'amicable-large-thumbnails' ); ?>
-		</figure>
+		<picture class="post-thumbnail">
+			<?php
+				$size = get_theme_mod( 'theme_content_feature_image', 'amicable-landscape-medium' ) ? get_theme_mod( 'theme_content_feature_image' ) : Mod::fallback( 'featured_image_size' );
+				the_post_thumbnail( $size );
+			?>
+		</picture>
 	<?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
