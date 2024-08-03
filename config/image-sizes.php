@@ -13,13 +13,6 @@
 
  return [
 
-	// Landscape sizes.
-	'post-thumbnail' => [
-		'label'            => __( 'Landscape: Thumbnail', 'amicable' ),
-		'width'            => 178,
-		'height'           => 100,
-		'is_featured_size' => false
-	],
 	'amicable-landscape-medium' => [
 		'label'  => __( 'Landscape: Medium', 'amicable' ),
 		'width'  => 640,
