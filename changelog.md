@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.6 - 08.03.2024
+
+### Added
+- Add Theme: Feature Image Support through customizer.
+
 ## 0.0.5 - 08.02.2024
 
 ### Added

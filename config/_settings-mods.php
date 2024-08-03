@@ -58,5 +58,5 @@ return [
 		return $copyright . ' <br /> ' . $footer_text;
 	},
 
-
+	'featured_image_size' => 'amicable-landscape-medium'
 ];

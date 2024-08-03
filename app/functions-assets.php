@@ -50,12 +50,60 @@ add_action( 'wp_enqueue_scripts', function() {
 add_action( 'wp_enqueue_scripts', function() {
 	$global_layout = get_theme_mod( 'theme_global_layout', 'full' );
 
+	$images = get_theme_mod( 'theme_content_feature_image', 'amicable-landscape-medium' );
 	$custom_css = "
 		.layout-wide .site-header .branding-navigation {
 			margin: 0 auto;
 			max-width: 1170px;
 		}
 	";
+
+    switch ($images) {
+        case 'amicable-landscape-medium':
+            $custom_css = "
+                .post-thumbnail .size-amicable-landscape-medium {
+					border-radius: 0.5rem;
+					box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+					display: block;
+					margin: 1.125rem auto;
+					max-width: 640px;
+                }
+            ";
+            break;
+        case 'amicable-landscape-large':
+            $custom_css = "
+                .post-thumbnail .size-amicable-landscape-large {
+					border-radius: 0.5rem;
+					box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+					display: block;
+					margin: 1.125rem auto;
+					max-width: 896px;
+                }
+            ";
+            break;
+        case 'amicable-landscape-extra-large':
+            $custom_css = "
+                .post-thumbnail .size-amicable-landscape-extra-large {
+					border-radius: 0.5rem;
+					box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+					display: block;
+					margin: 1.125rem auto;
+					max-width: 1366px;
+                }
+            ";
+            break;
+        default:
+            $custom_css = "
+                .post-thumbnail .size-amicable-landscape-medium {
+					border-radius: 0.5rem;
+					box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+					display: block;
+					margin: 1.125rem auto;
+					max-width: 640px;
+                }
+            ";
+            break;
+    }
 
 	wp_add_inline_style( 'amicable-screen', $custom_css );
 

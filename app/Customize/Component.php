@@ -118,6 +118,11 @@ class Component implements Bootable {
 			'priority' => 5
 		] );
 
+		$manager->add_section( 'theme_content_feature_image', [
+			'panel' => 'theme_content',
+			'title' => 'Feature Image',
+		] );
+
 		$manager->add_section( 'theme_footer_credit', [
 			'title' => esc_html__( 'Credit', 'amicable' ),
 			'panel' => 'theme_footer'

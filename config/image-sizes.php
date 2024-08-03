@@ -35,36 +35,4 @@
 		'width'  => 1366,
 		'height' => 768
 	],
-	'amicable-landscape-huge' => [
-		'label'  => __( 'Landscape: Huge', 'amicable' ),
-		'width'  => 1920,
-		'height' => 1080
-	],
-
-	// Portrait Sizes.
-	'amicable-portrait-small' => [
-		'label'  => __( 'Portrait: Small', 'amicable' ),
-		'width'  => 320,
-		'height' => 426
-	],
-
-	'amicable-portrait-medium' => [
-		'label'  => __( 'Portrait: Medium', 'amicable' ),
-		'width'  => 640,
-		'height' => 853
-	],
-
-	// Square Sizes.
-	'amicable-square-small' => [
-		'label'  => __( 'Square: Small', 'amicable' ),
-		'width'  => 320,
-		'height' => 320
-	],
-
-	'amicable-square-medium' => [
-		'label'  => __( 'Square: Medium', 'amicable' ),
-		'width'  => 640,
-		'height' => 640
-	]
-
 ];
