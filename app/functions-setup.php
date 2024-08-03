@@ -20,6 +20,7 @@
 namespace Amicable;
 
 use function Backdrop\Theme\is_classicpress;
+use Amicable\Tools\Config;
 
 /**
  * Set up theme support.  This is where calls to `add_theme_support()` happen.
@@ -45,15 +46,11 @@ add_action( 'after_setup_theme', function() {
 	// Adds featured image support.
 	add_theme_support( 'post-thumbnails' );
 
-		/**
-		 * By add_image_size( 'amicable-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
-		 */
-		add_image_size( 'amicable-medium', 640, 360, true );
+	$images = Config::get( 'image-sizes' );
 
-		/**
-		 * By add_image_size( 'amicable-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
-		 */
-		add_image_size( 'amicable-large', 896, 504, true );
+	foreach ( $images as $name => $size ) {
+		add_image_size( $name, $size['width'], $size['height'] );
+	}
 
 	if ( ! is_classicpress() ) {
 
