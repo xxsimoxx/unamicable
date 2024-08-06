@@ -88,6 +88,6 @@ add_action( 'init', function() {
 add_action( 'backdrop/templates/register', function( $templates ) {
 
 	$templates->add( 'template-home.php', [
-		'label' => esc_html__( 'Home Template', 'creativity' )
+		'label' => esc_html__( 'Home Template', 'amicable' )
 	] );
 } );
