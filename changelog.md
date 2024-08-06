@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.0.7 - TBD
+
+### Enhancements
+- Update PHP minimum to 7.4
+
+### Added
+- Add Custom template for template-home.php
+
 ## 0.0.6 - 08.03.2024
 
 ### Added
