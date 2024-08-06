@@ -76,3 +76,18 @@ add_action( 'init', function() {
 	] );
 
 }, 5 );
+
+/**
+ * Registers custom templates with ClassicPress.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  object  $templates
+ * @return void
+ */
+add_action( 'backdrop/templates/register', function( $templates ) {
+
+	$templates->add( 'template-home.php', [
+		'label' => esc_html__( 'Home Template', 'creativity' )
+	] );
+} );
