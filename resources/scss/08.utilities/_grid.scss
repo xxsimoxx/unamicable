@@ -19,3 +19,11 @@ $grid-columns: (
 		padding: 0;
 	}
 }
+
+
+.gallery-columns-3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.125rem;
+	max-width: 896px;
+}
