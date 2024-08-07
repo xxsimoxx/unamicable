@@ -1,9 +1,10 @@
 # Change Log
 
-## 0.0.7 - TBD
+## 0.0.7 - 08.07.2024
 
 ### Enhancements
 - Update PHP minimum to 7.4
+- Reorganize resources files
 
 ### Added
 - Add Custom template for template-home.php
