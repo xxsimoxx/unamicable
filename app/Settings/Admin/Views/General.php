@@ -24,6 +24,13 @@ use function Backdrop\Theme\is_classicpress;
  */
 class General extends View {
 
+    /**
+     * Holds the settings.
+     *
+     * @var array
+     */
+    private $settings;
+
 	/**
 	 * Returns the view name/ID.
 	 *
