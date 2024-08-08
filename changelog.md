@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.0.9 - 08.07.2024
+
+### Bug
+- Fixed color for entry title
+
+## 0.0.8 - 08.07.2024
+
+### Enhancement
+- Make sure tat we support 8.2 and 8.3
+- Make sure we set max-width to 100% for post thumbnails
+
 ## 0.0.7 - 08.07.2024
 
 ### Enhancements
