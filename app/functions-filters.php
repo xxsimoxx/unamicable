@@ -10,6 +10,12 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/amicable
  */
+
+namespace Amicable;
+
+use Amicable\Settings\Option;
+use Amicable\Tools\Config;
+use Amicable\Template\ErrorPage;
 /**
  * Filters the excerpt more link.
  *
@@ -29,3 +35,42 @@ add_filter( 'excerpt_more', function() {
 		)
 	);
 } );
+
+/**
+ * Adds error data for the 404 content template. Passes in the `ErrorPage` object
+ * as the `$error` variable.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  Backdrop\Tools\Collection  $data
+ * @return Backdrop\Tools\Collection
+ */
+add_filter( 'backdrop/view/content/data', function( $data ) {
+
+	if ( is_404() ) {
+		$data->add( 'error', new ErrorPage() );
+	}
+
+	return $data;
+
+} );
+
+/**
+ * Filters the post states on the manage pages screen. Adds a "404 Page" state
+ * to show users which page has been assigned as their 404 page.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array    $states
+ * @param  \WP_Post $post
+ * @return array
+ */
+add_filter( 'display_post_states', function( $states, $post ) {
+
+	if ( 'page' === $post->post_type && $post->ID === absint( Options::get( 'error_page' ) ) ) {
+		$states['amicable_error_404'] = __( '404 Page', 'amicable' );
+	}
+
+	return $states;
+
+}, 10, 2 );
