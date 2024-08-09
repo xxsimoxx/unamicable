@@ -1,9 +1,5 @@
 <section id="content" class="site-content clear">
 	<main id="main" class="content-area">
-		<?php
-		use Amicable\Template\ErrorPage;
-		$error = new ErrorPage(); // phpcs:ignore
-		?>
 		<?php $error->setup(); ?>
 		<article id="post-0" class="page">
 			<header class="entry-header">
