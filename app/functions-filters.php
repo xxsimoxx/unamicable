@@ -54,23 +54,3 @@ add_filter( 'backdrop/view/content/data', function( $data ) {
 	return $data;
 
 } );
-
-/**
- * Filters the post states on the manage pages screen. Adds a "404 Page" state
- * to show users which page has been assigned as their 404 page.
- *
- * @since  1.0.0
- * @access public
- * @param  array    $states
- * @param  \WP_Post $post
- * @return array
- */
-add_filter( 'display_post_states', function( $states, $post ) {
-
-	if ( 'page' === $post->post_type && $post->ID === absint( Options::get( 'error_page' ) ) ) {
-		$states['amicable_error_404'] = __( '404 Page', 'amicable' );
-	}
-
-	return $states;
-
-}, 10, 2 );
