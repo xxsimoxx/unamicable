@@ -21,6 +21,15 @@ use function Backdrop\Theme\is_classicpress;
 return [
 
 	# ----------------------------------------------------------------------
+	# Global layout.
+	# ----------------------------------------------------------------------
+	#
+	# Handles the global theme layout mods.
+
+	// Set the default layout.
+	'layout' => 'full',
+
+	# ----------------------------------------------------------------------
 	# Header.
 	# ----------------------------------------------------------------------
 	#
@@ -30,8 +39,6 @@ return [
 
 	// Branding separator (see `config/character-entities.php` for options).
 	'branding_sep' => '&#183;',
-
-	'layout' => 'full',
 
 
 	# ----------------------------------------------------------------------
@@ -46,7 +53,7 @@ return [
 
 	// Default footer credit text.
 	'theme_footer_custom_credit' => function() {
-		$year = gmdate('Y'); // Get the current year
+		$year = gmdate( 'Y' ); // Get the current year
 		$copyright = sprintf( __( "&#169; %1\$s. %2\$s.", 'amicable' ), $year, Backdrop\Theme\Site\render_home_link() );
 
 		if ( is_classicpress() ) {
