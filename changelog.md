@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.1.0 - 08.19.2024
+
+### Enhancement
+- Improved some css styles
+
+### Added
+- Custom Pagination for Posts Pagination and Post Navigation
+
 ## 0.0.9 - 08.07.2024
 
 ### Bug
