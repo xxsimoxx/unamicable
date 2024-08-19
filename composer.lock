@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea162fd1de3ae98b3ea150397ddb4b80",
+    "content-hash": "40e2c5e28b6fb8751da10a930858d16b",
     "packages": [
         {
             "name": "backdrop-dev/contracts",
@@ -155,12 +155,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/framework.git",
-                "reference": "79bf558270f73f3375b015d5b2356350c07c72fd"
+                "reference": "850999224860bf53ff0952a0841de41c24db4b13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/79bf558270f73f3375b015d5b2356350c07c72fd",
-                "reference": "79bf558270f73f3375b015d5b2356350c07c72fd",
+                "url": "https://api.github.com/repos/backdrop-dev/framework/zipball/850999224860bf53ff0952a0841de41c24db4b13",
+                "reference": "850999224860bf53ff0952a0841de41c24db4b13",
                 "shasum": ""
             },
             "require": {
@@ -199,7 +199,7 @@
                 "issues": "https://github.com/backdrop-dev/framework/issues",
                 "source": "https://github.com/backdrop-dev/framework/tree/develop"
             },
-            "time": "2024-08-06T21:18:45+00:00"
+            "time": "2024-08-11T03:48:27+00:00"
         },
         {
             "name": "backdrop-dev/languages",
@@ -301,6 +301,56 @@
                 "source": "https://github.com/backdrop-dev/mix/tree/develop"
             },
             "time": "2024-07-17T18:43:56+00:00"
+        },
+        {
+            "name": "backdrop-dev/pagination",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/backdrop-dev/pagination.git",
+                "reference": "9838e8d503880bd38c193fc13c39d41b9fe50e55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/backdrop-dev/pagination/zipball/9838e8d503880bd38c193fc13c39d41b9fe50e55",
+                "reference": "9838e8d503880bd38c193fc13c39d41b9fe50e55",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions-helpers.php"
+                ],
+                "psr-4": {
+                    "Backdrop\\Pagination\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://luthemes.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Enhanced pagination add-on for the Backdrop framework.",
+            "homepage": "https://github.com/backdrop-dev/pagination",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/backdrop-dev/pagination/issues",
+                "source": "https://github.com/backdrop-dev/pagination/tree/develop"
+            },
+            "time": "2024-08-19T17:42:29+00:00"
         },
         {
             "name": "backdrop-dev/template-helpers",
@@ -1163,6 +1213,7 @@
         "backdrop-dev/framework": 20,
         "backdrop-dev/languages": 20,
         "backdrop-dev/mix": 20,
+        "backdrop-dev/pagination": 20,
         "backdrop-dev/template-hierarchy": 20,
         "backdrop-dev/template-manager": 20,
         "backdrop-dev/theme": 20,
