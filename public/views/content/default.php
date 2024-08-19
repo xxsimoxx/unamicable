@@ -4,7 +4,7 @@
 			<?php while( have_posts() ) : the_post(); ?>
 				<?php Backdrop\View\display( 'entry' ); ?>
 			<?php endwhile; ?>
-			<?php the_posts_pagination(); ?>
+				<?php Backdrop\View\display( 'nav/pagination', 'posts' ); ?>
 		<?php endif; ?>
 	</main>
 </section>

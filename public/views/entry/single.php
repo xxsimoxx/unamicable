@@ -15,5 +15,6 @@
 	<?php } ?>
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php Backdrop\View\display( 'nav/pagination', 'post' ); ?>
 	</div>
 </article>
