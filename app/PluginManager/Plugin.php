@@ -61,9 +61,6 @@ class Plugin {
             if ( isset( $api->short_description ) ) {
                 $this->description = $api->short_description;
             }
-        } else {
-            // Handle error (e.g., plugin not found)
-            error_log('Error fetching plugin data: ' . $api->get_error_message());
         }
     }
 
