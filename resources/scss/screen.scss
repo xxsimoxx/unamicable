@@ -81,3 +81,65 @@
 // only if necessary.
 
 @import '08.utilities/__index';
+
+.plugin {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plugin.active {
+    border-left: 4px solid #007cba;
+}
+
+.plugin-id-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.plugin-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.plugin-actions {
+    margin-left: auto;
+}
+
+.plugin-actions a {
+    margin-left: 10px;
+}
+
+.button {
+    text-decoration: none;
+    background: #007cba;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.button-secondary {
+    background: #f0f0f0;
+    color: #444;
+}
+
+.button:hover {
+    background: #006ba1;
+}
+
+.button-secondary:hover {
+    background: #e5e5e5;
+}
+
+.plugin.active .plugin-name span {
+    color: #007cba;
+    font-weight: bold;
+}
