@@ -1,6 +1,4 @@
 {
-	"regenerate-thumbnails" : {
-		"label" : "Regenerate Thumbnails",
-		"description" : "Regenerate the thumbnails for one or more of your image uploads. Useful when changing their sizes or your theme."
-	}
+	"classicpress-directory-integration": {},
+	"regenerate-thumbnails" : {}
 }

@@ -84,4 +84,5 @@ mix.js( `${devPath}/js/app.js`, 'js' )
 // Compile SASS/CSS.
 mix.sass( `${devPath}/scss/screen.scss`, 'css', )
 	.sass( `${devPath}/scss/customize-preview.scss`,  'css' )
-	.sass( `${devPath}/scss/customize-controls.scss`, 'css' );
+	.sass( `${devPath}/scss/customize-controls.scss`, 'css' )
+	.sass( `${devPath}/scss/admin.scss`, 'css' );
