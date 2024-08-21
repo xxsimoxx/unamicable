@@ -105,11 +105,11 @@ class Plugin {
                 <h2 class="plugin-name" id="<?php echo esc_attr( sprintf( '%s-name', $this->name() ) ) ?>" style="margin-bottom: 0.25rem;">
                     <?php echo esc_html( $this->label() ) ?>
                 </h2>
-                <?php echo $this->author(); ?>
+                <?php echo esc_html( wp_strip_all_tags( $this->author() ) ); ?>
             </div>
 
             <div class="plugin-description" style="padding: 1rem; margin-bottom: 1rem;">
-                <p><?php echo esc_html( strip_tags( $this->description() ) ); ?></p>
+                <p><?php echo esc_html( wp_strip_all_tags( $this->description() ) ); ?></p>
             </div>
 
 
