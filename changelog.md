@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.1.2 - TDB
+
+### Added
+- Category for single post
+
 ## 0.1.1 - 08.21.2024
 
 ### Added

@@ -17,4 +17,16 @@
 		<?php the_content(); ?>
 		<?php Backdrop\View\display( 'nav/pagination', 'post' ); ?>
 	</div>
+	<footer class="entry-footer">
+	<?php Backdrop\Theme\Entry\display_terms( [
+			// Translators: %s is the category list.
+			'text'     => __( 'Topics: %s', 'amicable' ),
+			'taxonomy' => 'category'
+		] ) ?>
+		<?php Backdrop\Theme\Entry\display_terms( [
+			// Translators: %s is the post tags list.
+			'text'     => __( 'Tagged %s', 'amicable' ),
+			'taxonomy' => 'post_tag'
+		] ) ?>
+	</footer>
 </article>
