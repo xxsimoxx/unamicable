@@ -58,7 +58,16 @@
 
         .entry-footer {
 			font-size: 14px;
+			font-style: italic;
             text-align: center;
+
+			.entry__terms {
+				font-weight: bold;
+
+				a {
+					font-weight: normal;
+				}
+			}
         }
 	}
 }
