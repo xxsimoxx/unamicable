@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.1.1 - 08.21.2024
+
+### Added
+- Added a section in Admin Page for Recommended Plugins
+
 ## 0.1.0 - 08.19.2024
 
 ### Enhancement
