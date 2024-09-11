@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/backdrop-dev/customize.git",
-                "reference": "64d098249d978e1ae872e14747eba2be3acd6352"
+                "reference": "fe9342d7b36b7b39d1fd81149307f510305f5de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backdrop-dev/customize/zipball/64d098249d978e1ae872e14747eba2be3acd6352",
-                "reference": "64d098249d978e1ae872e14747eba2be3acd6352",
+                "url": "https://api.github.com/repos/backdrop-dev/customize/zipball/fe9342d7b36b7b39d1fd81149307f510305f5de3",
+                "reference": "fe9342d7b36b7b39d1fd81149307f510305f5de3",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +99,7 @@
                 "issues": "https://github.com/backdrop-dev/customize/issues",
                 "source": "https://github.com/backdrop-dev/customize/tree/develop"
             },
-            "time": "2024-08-01T16:53:14+00:00"
+            "time": "2024-09-11T05:54:53+00:00"
         },
         {
             "name": "backdrop-dev/fonts",

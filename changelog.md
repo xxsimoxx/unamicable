@@ -1,6 +1,9 @@
 # Change Log
 
-## 0.1.2 - TDB
+## 0.1.2 - 09.11.2024
+
+### Enhancement
+- Make sure that we set html with line-height of 1.15 acrosss browsers
 
 ### Added
 - Category for single post
