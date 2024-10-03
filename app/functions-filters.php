@@ -16,6 +16,8 @@ namespace Amicable;
 use Amicable\Settings\Option;
 use Amicable\Tools\Config;
 use Amicable\Template\ErrorPage;
+use Amicable\Tools\Svg;
+
 /**
  * Filters the excerpt more link.
  *
