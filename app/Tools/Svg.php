@@ -11,7 +11,7 @@
  * @link      https://luthemes.com/portfolio/amicable
  */
 
-namespace WhiteSpektrum\Tools;
+namespace Amicable\Tools;
 
 /**
  * SVG class.
@@ -33,7 +33,7 @@ class Svg {
 
 		$svg = file_get_contents( static::path( "{$name}.svg" ) );
 
-		return apply_filters( "white/spektrum/svg/{$name}", $svg ?: '' );
+		return apply_filters( "amicable/svg/{$name}", $svg ?: '' );
 	}
 
 	/**
@@ -59,6 +59,6 @@ class Svg {
 
 		$file = trim( $file, '/' );
 
-		return get_theme_file_path( $file ? "public/svg/{$file}" : 'public/svg' );
+		return get_theme_file_path( $file ? "public/svg/social-icons/{$file}" : 'public/svg' );
 	}
 }
