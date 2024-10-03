@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.1.3 - 10.03.2024
+
+### Added
+- Added Support for Social Menu
+
 ## 0.1.2 - 09.11.2024
 
 ### Enhancement
