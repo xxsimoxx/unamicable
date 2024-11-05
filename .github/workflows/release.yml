@@ -1,45 +1,30 @@
-name: release
-
+name: Generate Installable Plugin or Theme, and Upload as Release Asset
 on:
-    release:
-        types: [published]
-
+  release:
+    types: [published]
 jobs:
-    release:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: step one
-              uses: webfactory/ssh-agent@v0.5.4
-              with:
-                  ssh-private-key: ${{ secrets.PRIVATE_KEY }}
-
-            - name: step two
-              uses: actions/checkout@v2
-              with:
-                  ssh-key: ${{ secrets.PRIVATE_KEY }}
-
-            - name: step three
-              run: composer install --no-dev
-
-            - name: step four
-              run: npm install
-
-            - name: step five
-              run: npm run build
-
-            - name: step six
-              run: zip -r ${{ github.event.repository.name }}.${{ github.ref_name }}.zip ${{ github.event.repository.name }}
-
-            - name: step seven
-              uses: actions/upload-artifact@v4
-              with:
-                  name: ${{ github.event.repository.name }}.${{ github.ref_name }}
-                  path: ${{ github.event.repository.name }}.${{ github.ref_name }}.zip
-
-            - name: step eight
-              uses: JasonEtco/upload-to-release@master
-              with:
-                  args: ${{ github.event.repository.name }}.${{ github.ref_name }}.zip application/zip
-              env:
-                  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+  build:
+    name: Upload Release Asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Create artifact
+        run : |
+          git archive -o ${{ github.event.repository.name }}-${{ github.ref_name }}.zip --prefix ${{ github.event.repository.name }}/ HEAD 
+          ls
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: ${{ github.event.repository.name }}-${{ github.ref_name }}
+            path: ${{ github.event.repository.name }}-${{ github.ref_name }}.zip
+      - name: Upload to release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: ${{ github.event.repository.name }}-${{ github.ref_name }}.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
